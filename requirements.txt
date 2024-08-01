@@ -1,6 +1,1 @@
 streamlit
-matplotlib
-pandas
-datetime
-os
-time
