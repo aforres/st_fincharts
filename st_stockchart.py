@@ -2,6 +2,8 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 from datetime import datetime, timedelta
+import plotly.graph_objs as go
+
 
 # Define a dictionary mapping stock names to their ticker symbols
 stocks = {
@@ -39,7 +41,7 @@ stock_data = yf.download(ticker_symbol, start=start_date, end=end_date)
 st.write(stock_data)
 
 # Plot the data with customized x-axis date format
-import plotly.graph_objs as go
+#import plotly.graph_objs as go
 
 fig = go.Figure()
 fig.add_trace(go.Scatter(x=stock_data.index, y=stock_data['Close'], mode='lines', name='Close'))
